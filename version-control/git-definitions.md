@@ -18,5 +18,4 @@ a commit creates a save point in git.  a good commit message is detailed and sta
 
 branching allows people to work on a similar project independently and merge them back to an original version.  however, sometimes, independent workers can change the same part of the original, and git does not know which one is the correct change to integrate.
 
-
 hello tyler!

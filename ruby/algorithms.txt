@@ -1,0 +1,43 @@
+Elevator Algorithm
+1. approach elevator door
+2. if number of desired floor is greater than number of current floor, push top button
+3. if number of desired floor is lesser than number of current floor, push bottom button.
+4.  when elevator doors open, enter elevator until entirely inside and turn around. 
+5. after elevator doors close, push button with number that matches desired floor.
+6.  exit elevator only when door opens on floor whose number matches desired floor. 
+
+Brush Teeth Algorithm
+1. Turn handle on sink by rotating handle to right of sink to the left until water flows from faucet.
+2. Pick up toothbrush handle and hold bristle under running water for 5 seconds. 
+3. Turn sink handle to the right until water stops.
+4. pick up toothpaste and remove cap.
+5. squeeze center of toothpaste until 1 inch of paste rests on bristles of toothbrush. 
+6. cap toothpaste and place on sink counter.  
+7. insert toothbrush bristle and paste into mouth until makes contact with teeth.  
+8. move toothbrush along top teeth from front tooth to back top left. 
+9. when reach last left top tooth, move toothbrush along teeth back to front.
+10. when reach front teeth, move toothbrush alongside teeth to back left tooth. 
+11. continue for 30 seconds.
+12. move toothbrush along bottom teeth from front teeth to bottom back left.
+13. when reach back tooth, move toothbrush along teeth back to front.
+14. when reach front of mouth, move toothbrush alongside teeth to back left tooth.
+15. continue for 30 seconds. 
+16. move toothbrush along top teeth from front tooth to top back right.
+17. when reach back tooth, move toothbrush along teeth back to front.
+18. when reach front of of mouth, move toothbrush alongside teeth to back left tooth.
+19. continue for 30 seconds. 
+20. move toothbrush along bottom teeth from front tooth to bottom back right.
+21. when reach back tooth, move toothbrush along teeth back to front.
+22. when reach front of of mouth, move toothbrush alongside teeth to back right tooth.
+23. continue for 30 seconds. 
+24. remove toothbrush from mouth.
+25. turn right handle on sink to the left until water runs.
+26. hold bristle under water for 5 seconds.
+27. place toothbrush on sink.
+28. fill cup with 10ml of water.
+29. transfer water from cup to mouth and close mouth.
+30. move bottom jaw back and forth one inch for 10 seconds.
+31. open mouth over sink and spit water into sink.
+32. when mouth is empty, turn sink handle to the right until water stops.
+33. use towel to remove remaining toothpaste and water from lips.
+

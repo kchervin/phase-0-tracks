@@ -1,3 +1,39 @@
-body {
-  background-color: blue
+header, footer {
+  background-color: pink;
+  font-family: courier;
+  width: 83%;
+  margin: 5px;
+  padding: 5px
 }
+
+.column-1 {
+  background-color: grey;
+  font-family: courier;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  padding: 5px;
+  width: 40%
+}
+
+.column-2 {
+  background-color: grey;
+  font-family: courier;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  padding: 5px;
+  width: 40%
+}
+
+  .column-1 a:link {
+    color: pink
+  }
+
+  .column-1 a:hover {
+    color: purple
+  }
+
+  footer a:link {
+    color: grey
+  }

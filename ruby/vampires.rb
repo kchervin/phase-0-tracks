@@ -1,3 +1,10 @@
+puts "how many employees will be processed?"
+employee_count = gets.chomp.to_i
+survey_count = 0
+
+while survey_count < employee_count
+survey_count += 1
+
 puts "What is your name?"
 user_name = gets.chomp
 
@@ -55,3 +62,5 @@ else
 end
 
 puts "results = #{result}!!"
+
+end

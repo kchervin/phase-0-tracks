@@ -8,6 +8,8 @@ survey_count += 1
 puts "What is your name?"
 user_name = gets.chomp
 
+
+
 puts "How old are you?"
 stated_age = gets.chomp.to_i
 
@@ -20,6 +22,7 @@ wrong_age = stated_age != calculated_age
 
 puts "do you like garlic? (y/n)"
 input = gets.chomp
+
 
 if input == "y"
   likes_garlic = true
@@ -36,6 +39,17 @@ else
   wants_insurance = false
 end
 
+puts "do you have any allergies? please hit return after each allergy listed.  When complete, type: done followed by the return key."
+user_allergy = ""
+while user_allergy != "done"
+user_allergy = gets.chomp
+if user_allergy == "sunshine"
+  result = "probably a vampire"
+  break
+end
+end
+
+if user_allergy == "done"
 case
 when user_name == "dracula"
 
@@ -59,6 +73,7 @@ when (wants_insurance == likes_garlic) && likes_garlic = false && wrong_age
 
 else
    result = "inconclusive"
+end
 end
 
 puts "results = #{result}!!"

@@ -94,13 +94,33 @@ extinct_animals = {
   "Laysan Crake" => 1923
 }
 
+
+
 # 1. Iterate through extinct_animals hash, printing each key/value pair
 # with a dash in between the key and value, and an asterisk between each pair.
 # ----
 
+extinct_animals.each do |name, year|
+print "#{name} - #{year} * "
+end
+
+extinct_animals.each do |name, year|
+puts "#{name} - #{year}"
+puts "*"
+end
+
 # 2. Keep only animals in extinct_animals if they were extinct before
 # the year 2000. Do not use any special built-in methods.
 # ----
+
+
+extinct_animals.each do |animal, year|
+    if year >= 2000
+      extinct_animals.delete(animal)
+    end
+end
+
+p extinct_animals
 
 # 3. Our calculations were completely off, turns out all of those animals went
 # extinct 3 years before the date provided. Update the values in extinct_animals

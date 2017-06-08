@@ -6,6 +6,9 @@ zombie_apocalypse_supplies.each do |followby|
    print followby + ' * '
 end
 
+
+
+
 # 1. Iterate through the zombie_apocalypse_supplies array,
 # printing each item in the array separated by an asterisk
 # ----
@@ -51,6 +54,26 @@ find(zombie_apocalypse_supplies,'boots')
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5. Do not use any special built-in methods.
 # ----
+
+
+def delete(array)
+  until array.length ==  5
+    array.pop
+  end
+end
+
+delete(zombie_apocalypse_supplies)
+print zombie_apocalypse_supplies
+
+
+
+
+
+
+
+
+
+
 
 # 5. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies

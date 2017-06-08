@@ -2,6 +2,9 @@
 
 zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
                               "shotgun", "compass", "CB radio", "batteries"]
+zombie_apocalypse_supplies.each do |followby|
+   print followby + ' * '
+end
 
 # 1. Iterate through the zombie_apocalypse_supplies array,
 # printing each item in the array separated by an asterisk
@@ -10,6 +13,22 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 # 2. In order to keep yourself organized, sort your zombie_apocalypse_supplies
 # in alphabetical order. Do not use any special built-in methods.
 # ----
+def alphabetize(a)
+  for i in 1...(a.length)
+  while i>0
+    if a[i-1].downcase>a[i].downcase
+      temp =a[i]
+      a[i]=a[i-1]
+      a[i-1]=temp
+    else
+      break
+    end
+    i=i-1
+  end
+end
+return a
+end
+p alphabetize(zombie_apocalypse_supplies)
 
 # 3. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies. Do not use any special built-in methods.

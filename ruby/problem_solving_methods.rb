@@ -35,3 +35,17 @@ p method(try_array, 4)
 p method(try_array, 1)
 p method(try_array, 42)
 
+def fibonacci_method(num_terms)
+  fib_numbers = [0,1]
+  num1 = 0
+  num2 = 1
+  until fib_numbers.length == num_terms
+    result = num1 + num2
+    fib_numbers << result
+    num1 = num2
+    num2 = result
+  end
+  fib_numbers
+end
+
+p fibonacci_method(100)[-1] ==218922995834555169026

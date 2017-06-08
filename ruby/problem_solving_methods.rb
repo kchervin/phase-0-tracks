@@ -49,3 +49,29 @@ def fibonacci_method(num_terms)
 end
 
 p fibonacci_method(100)[-1] ==218922995834555169026
+
+#release 2:
+#iterate through an array for index 1 - last index in the array.
+#Set up a loop to compare the current index item to the index item prior.  if current index item is less than prior index item, swap the item.  Then, compare to each item prior, until current index item is greater than prior index item. Otherwise, continue to iterate through array.
+#return new array
+
+def insertion_sort(a)
+  for i in 1...(a.length)
+
+    while i>0
+      if a[i] < a[i-1]
+        temp = a[i-1]
+        a[i-1] = a[i]
+        a[i] = temp
+      else
+        break
+      end
+      i = i-1
+    end
+  end
+  return a
+end
+
+
+array = [27, 16, 1, 15, 42]
+p insertion_sort(array)

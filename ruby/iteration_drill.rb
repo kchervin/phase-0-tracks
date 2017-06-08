@@ -35,6 +35,18 @@ p alphabetize(zombie_apocalypse_supplies)
 # For instance: are boots in your list of supplies?
 # ----
 
+def find(array, string)
+  result = false
+  for item in array
+    if item == string
+       result = true
+    end
+  end
+  p result
+end
+
+find(zombie_apocalypse_supplies,'boots')
+
 # 4. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5. Do not use any special built-in methods.

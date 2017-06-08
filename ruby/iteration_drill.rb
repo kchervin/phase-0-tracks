@@ -69,12 +69,6 @@ print zombie_apocalypse_supplies
 
 
 
-
-
-
-
-
-
 # 5. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
 # and their supplies below. You should get rid of any duplicate items.
@@ -82,6 +76,10 @@ print zombie_apocalypse_supplies
 # documentation for Arrays.
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
+
+all_supplies = zombie_apocalypse_supplies | other_survivor_supplies
+p all_supplies
+
 # ----
 
 # Hash Drills

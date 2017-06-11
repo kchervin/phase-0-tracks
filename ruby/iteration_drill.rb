@@ -163,5 +163,4 @@ end
 # Find the built-in method that helps you accomplish this in the Ruby documentation
 # for Hashes.
 # ----
-
-extinct_animals.shift
+**.shift?

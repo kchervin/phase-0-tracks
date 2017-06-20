@@ -72,7 +72,7 @@ private
     end
 
     puts " and will spread across the state in #{speed} months.\n\n"
-#change to speed += if ...
+#change to: speed += if ...
 #remove "speed += from each individual line "
   end
 
@@ -104,3 +104,13 @@ end
 
 #=======================================================================
 # Reflection Section
+
+
+
+# # What are the differences between the two different hash syntaxes shown in the state_data file?
+#There is a hash of state and data, as well as a hash for each state of its denisty and population.
+# What does require_relative do? How is it different from require? require relative provides a path from a file in the same directory as the file youre working in, require creates a path to a file from outside of the directory
+# What are some ways to iterate through a hash?
+#through keys, values, or both
+# When refactoring virus_effects, what stood out to you about the variables, if anything? the variables were the names of the two remaining methods
+# What concept did you most solidify in this challenge? Last week, I felt like I was becoming familiar with the different aspects of class, but was having a difficult time understanding how to piece each separate piece together.  This challenge definitely helped me visualize how the pieces communite and fit together.  I also have a much better understanding of iterating through a hash.

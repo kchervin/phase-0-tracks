@@ -6,6 +6,17 @@
 
 function reverse(string) {
   var reversed_string = "";
-  for (){};
-return
+  for (var i = string.length -1; i >=0; i--){reversed_string += string[i]};
+return reversed_string
   }
+
+reversed_string = reverse("hello")
+console.log(reversed_string)
+
+if (1 == 1) {
+var reversed_string = reverse('true!')
+console.log (reversed_string + " " + "hello!") }
+else {
+var reversed_string = reverse('false!')
+console.log (reversed_string + " " + "goodbye!")
+}

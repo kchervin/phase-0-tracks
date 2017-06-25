@@ -3,11 +3,11 @@
 
 function longestWord(array) {
   var longest = array[0];
-  for (i = 0 ; i < array.length; i++) {
-    if (array [i].length > longest.length) {
-      longest = array[i];
+    for (i = 0 ; i < array.length; i++) {
+      if (array [i].length > longest.length) {
+         longest = array[i];
+       }
     }
-  }
   return longest;
 }
 
@@ -17,16 +17,15 @@ function longestWord(array) {
 //input is two objects, output is a boolean value.
 
 function compare(object1, object2) {
- for (var key1 in object1) {
-   for (var key2 in object2) {
+   for (var key1 in object1) {
+    for (var key2 in object2) {
      if (key1 == key2) {
-       if (object1[key1] == object2[key2])
-        {
+       if (object1[key1] == object2[key2]) {
          return true;
        }
+      }
      }
-   }
- }
+    }
   return false;
 }
 
@@ -40,21 +39,19 @@ function compare(object1, object2) {
 
 function createNew(n) {
   var newWords = [];
-  for (var i = 0; i < n; i++) {
-    var alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    var newString = '';
+    for (var i = 0; i < n; i++) {
+      var alphabet = 'abcdefghijklmnopqrstuvwxyz'
+      var newString = '';
 
     for (var y = 0; y < Math.random() * 10; y++) {
       newString += alphabet.charAt(Math.floor(Math.random( ) * 26));
     }
   newWords.push(newString);
+    }
+  return newWords;
 }
-return newWords;
-}
 
-
-
-//driver code
+//driver code:
 
 var gerbals = ['samantha', 'sam', 'sammy', 'samson']
 var puppies = ['ted', 'teddy', 'theodore'];

@@ -15,3 +15,16 @@ function longestWord(array) {
 //if the key in the first hash is equal to the key in teh second hash, compare the values of these equal keys. if the values are equal return true.  else, return false.
 //input is two objects, output is a boolean value.
 
+function compare(object1, object2) {
+ for (var key1 in object1) {
+   for (var key2 in object2) {
+     if (key1 == key2) {
+       if (object1[key1] == object2[key2])
+        {
+         return true;
+       }
+     }
+   }
+ }
+  return false;
+}

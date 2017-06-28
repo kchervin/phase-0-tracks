@@ -102,3 +102,46 @@ sqlite> select * from campers;
 15|Penelope|true|1
 16|Quinn|true|1
 17|Ralph|false|2
+
+sqlite>  select campers.swimmer, groups.color from campers join groups on campers.group_id = groups
+true|blue
+true|blue
+false|blue
+false|blue
+false|green
+true|green
+true|green
+false|green
+true|blue
+true|blue
+true|green
+true|green
+false|blue
+true|green
+true|blue
+true|blue
+false|green
+
+inner join - nothing to join?
+sqlite> select campers.name, groups.name from campers inner join groups on campers.name = groups.name;
+sqlite>
+
+sqlite> select group_id from campers left join groups on campers.group_id = groups.id
+   ...> ;
+1
+1
+1
+1
+2
+2
+2
+2
+1
+1
+2
+2
+1
+2
+1
+1
+2

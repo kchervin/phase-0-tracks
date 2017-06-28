@@ -1,0 +1,147 @@
+sqlite> select * from campers;
+1|Annie|true|1
+2|Belle|true|1
+3|Cathy|false|1
+4|Debbie|false|1
+5|Frankie|false|2
+6|Gerrie|true|2
+7|Harry|true|2
+8|Isaac|false|2
+9|Jenny|true|1
+10|Katy|true|1
+11|Lenny|true|2
+12|Manny|false|2
+13|Nicole|false|1
+14|Oliver|true|2
+15|Penelope|true|1
+16|Quinn|true|1
+17|Ralph|false|2
+18|Sam|true|2
+
+sqlite> update campers set swimmer="true" where name="Manny"
+   ...> ;
+sqlite> select * from campers;
+1|Annie|true|1
+2|Belle|true|1
+3|Cathy|false|1
+4|Debbie|false|1
+5|Frankie|false|2
+6|Gerrie|true|2
+7|Harry|true|2
+8|Isaac|false|2
+9|Jenny|true|1
+10|Katy|true|1
+11|Lenny|true|2
+12|Manny|true|2
+13|Nicole|false|1
+14|Oliver|true|2
+15|Penelope|true|1
+16|Quinn|true|1
+17|Ralph|false|2
+18|Sam|true|2
+
+sqlite> select * from campers, groups where campers.group_id = groups.id;
+1|Annie|true|1|1|flamingos|blue
+2|Belle|true|1|1|flamingos|blue
+3|Cathy|false|1|1|flamingos|blue
+4|Debbie|false|1|1|flamingos|blue
+5|Frankie|false|2|2|alligators|green
+6|Gerrie|true|2|2|alligators|green
+7|Harry|true|2|2|alligators|green
+8|Isaac|false|2|2|alligators|green
+9|Jenny|true|1|1|flamingos|blue
+10|Katy|true|1|1|flamingos|blue
+11|Lenny|true|2|2|alligators|green
+12|Manny|true|2|2|alligators|green
+13|Nicole|false|1|1|flamingos|blue
+14|Oliver|true|2|2|alligators|green
+15|Penelope|true|1|1|flamingos|blue
+16|Quinn|true|1|1|flamingos|blue
+17|Ralph|false|2|2|alligators|green
+18|Sam|true|2|2|alligators|green
+sqlite>
+
+
+sqlite> select campers.name, groups.name from campers join groups on campers.group_id = groups.id;
+Annie|flamingos
+Belle|flamingos
+Cathy|flamingos
+Debbie|flamingos
+Frankie|alligators
+Gerrie|alligators
+Harry|alligators
+Isaac|alligators
+Jenny|flamingos
+Katy|flamingos
+Lenny|alligators
+Manny|alligators
+Nicole|flamingos
+Oliver|alligators
+Penelope|flamingos
+Quinn|flamingos
+Ralph|alligators
+Sam|alligators
+
+sqlite> delete from campers where name="Sam"
+   ...> ;
+sqlite> select * from campers;
+1|Annie|true|1
+2|Belle|true|1
+3|Cathy|false|1
+4|Debbie|false|1
+5|Frankie|false|2
+6|Gerrie|true|2
+7|Harry|true|2
+8|Isaac|false|2
+9|Jenny|true|1
+10|Katy|true|1
+11|Lenny|true|2
+12|Manny|true|2
+13|Nicole|false|1
+14|Oliver|true|2
+15|Penelope|true|1
+16|Quinn|true|1
+17|Ralph|false|2
+
+sqlite>  select campers.swimmer, groups.color from campers join groups on campers.group_id = groups
+true|blue
+true|blue
+false|blue
+false|blue
+false|green
+true|green
+true|green
+false|green
+true|blue
+true|blue
+true|green
+true|green
+false|blue
+true|green
+true|blue
+true|blue
+false|green
+
+inner join - nothing to join?
+sqlite> select campers.name, groups.name from campers inner join groups on campers.name = groups.name;
+sqlite>
+
+sqlite> select group_id from campers left join groups on campers.group_id = groups.id
+   ...> ;
+1
+1
+1
+1
+2
+2
+2
+2
+1
+1
+2
+2
+1
+2
+1
+1
+2

@@ -24,13 +24,18 @@ def see_ratings(db)
 end
 end
 
+def update(db, title, stars)
+  db.execute("UPDATE book SET stars=? WHERE title=?", [stars, title])
+end
+
+
 
 def quit
   puts "goodbye"
 end
 
 loop do
-puts "please select from the following? 1 = add a title, 2 = view titles, 3 = quit"
+puts "please select from the following? 1 = add a title, 2 = view titles, 3 = update, 4 = quit"
 user_input = gets.chomp
 
 if user_input == "1"
@@ -44,6 +49,13 @@ elsif user_input == "2"
   see_ratings(db)
 
 elsif user_input == "3"
+  puts "which title would you like to update?"
+  title = gets.chomp
+  puts "what is new rating?"
+  stars = gets.chomp
+  update(db, title, stars)
+
+elsif user_input == "4"
   quit
   break
 end

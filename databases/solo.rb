@@ -18,6 +18,7 @@ def create_book_shelf(db, title, stars)
 end
 
 def see_ratings(db)
+  puts "your book list:"
  book = db.execute('SELECT * FROM book')
  book.each do |id, title, stars|
   puts " #{title}, #{stars}"
@@ -28,20 +29,22 @@ def update(db, title, stars)
   db.execute("UPDATE book SET stars=? WHERE title=?", [stars, title])
 end
 
-
+def delete(db, title)
+  db.execute("DELETE FROM book where title=?", [title])
+end
 
 def quit
   puts "goodbye"
 end
 
 loop do
-puts "please select from the following? 1 = add a title, 2 = view titles, 3 = update, 4 = quit"
+puts "please select from the following? 1 = add a title, 2 = view titles, 3 = update, 4 = delete, 5 = quit"
 user_input = gets.chomp
 
 if user_input == "1"
-  puts "title?"
+  puts "what book would you like to add?"
   title = gets.chomp
-  puts "stars?"
+  puts "How many stars would you rate this book, on a scale of 1-5?"
   stars = gets.chomp
   create_book_shelf(db, title, stars)
 
@@ -56,6 +59,11 @@ elsif user_input == "3"
   update(db, title, stars)
 
 elsif user_input == "4"
+  puts "which title would you like to delete?"
+  title = gets.chomp
+  delete(db, title)
+
+elsif user_input == "5"
   quit
   break
 end

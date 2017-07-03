@@ -1,17 +1,52 @@
 require 'sqlite3'
-
+require 'faker'
 
 db = SQLite3::Database.new("solo.db")
 
+create_table = <<-SQL
+  CREATE TABLE IF NOT EXISTS book(
+  id INTEGER PRIMARY KEY,
+  title VARCHAR(255),
+  stars INT
+  )
+SQL
 
-# So far in this course, you've had to satisfy a rubric by reading for detail, asking questions to resolve ambiguity, and building programs to spec. These are crucial skills for a developer.
+db.execute(create_table)
 
-# But learning and self-development skills are important, too:
+def create_book_shelf(db, title, stars)
+  db.execute("INSERT INTO book (title, stars) VALUES (?, ?)", [title, stars])
+end
 
-# What do you do with your free time?
-# How do you find ways to push yourself when there's no one around to tell you what to do?
-# How do you find new ideas to explore when we aren't providing them as bullets?
-# Your answers to these questions will have a huge impact on your success, and today is your first official opportunity to practice.
+def see_ratings(db)
+ book = db.execute('SELECT * FROM book')
+ book.each do |id, title, stars|
+  puts " #{title}, #{stars}"
+end
+end
 
-# DO THE THING
-# Write a Ruby program that uses persistent data to make your life better, or makes someone else's life better. Find several opportunities to try something not explicitly shown in the video. Can users create data? Retrieve it? Manipulate it? It's up to you. Push yourself, and decide with integrity when you are finished. Note that you do not need to use classes in this assignment -- keeping a class instance and a database row in sync is a lot of work, so that might be too much to tackle.
+
+def quit
+  puts "goodbye"
+end
+
+loop do
+puts "please select from the following? 1 = add a title, 2 = view titles, 3 = quit"
+user_input = gets.chomp
+
+if user_input == "1"
+  puts "title?"
+  title = gets.chomp
+  puts "stars?"
+  stars = gets.chomp
+  create_book_shelf(db, title, stars)
+
+elsif user_input == "2"
+  see_ratings(db)
+
+elsif user_input == "3"
+  quit
+  break
+end
+end
+
+

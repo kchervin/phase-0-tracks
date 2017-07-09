@@ -1,5 +1,4 @@
 require 'sqlite3'
-require 'faker'
 
 db = SQLite3::Database.new("solo.db")
 
@@ -68,5 +67,3 @@ elsif user_input == "5"
   break
 end
 end
-
-
